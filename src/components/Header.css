@@ -2,14 +2,13 @@
   background-size: cover;
   width: 100%;
   height: 68rem;
-  margin-top: -24rem;
+  margin-top: -23rem;
 }
 
-.header__navbar {
-}
 .header__tittle {
   font-family: 'Alata';
   font-size: 7.5rem;
   font-weight: 400;
   color: #850808;
+  position: absolute;
 }
