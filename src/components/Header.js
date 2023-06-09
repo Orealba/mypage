@@ -5,15 +5,16 @@ import Navbar from './Navbar.js'
 
 const Header = () => {
   return (
-    <div className="container-fluid">
-      <div className="header__navbar"></div>
-      <Navbar />
-
+    <div>
       <div
         className="header__background"
         style={{ backgroundImage: `url(${headerBackground})` }}
-      ></div>
-      <div className="header__tittle">OREALBA SORIANO</div>
+      >
+        <div className=" header__navbar">
+          <Navbar />
+        </div>
+        <div className=" header__tittle">OREALBA SORIANO</div>
+      </div>
     </div>
   )
 }
