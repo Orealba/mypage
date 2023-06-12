@@ -45,11 +45,7 @@ const Navbar = () => {
                     My works
                   </a>
                 </li>
-                <li>
-                  <a href="#" className=" ">
-                    My goals
-                  </a>
-                </li>
+
                 <li>
                   <a href="#" className=" ">
                     Contact

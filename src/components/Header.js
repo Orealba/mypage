@@ -13,7 +13,8 @@ const Header = () => {
         <div className=" header__navbar">
           <Navbar />
         </div>
-        <div className=" header__tittle">OREALBA SORIANO</div>
+        <div className="header__tittle">OREALBA SORIANO</div>
+        <div className="header__description">FULL-STACK DEVELOPER</div>
       </div>
     </div>
   )
