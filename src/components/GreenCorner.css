@@ -1,0 +1,48 @@
+.greenCorner__background {
+  background-color: #f0f0f0;
+}
+
+.greenCorner__tittle {
+  font-family: 'DM Sans';
+  color: #5d534a;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5rem;
+
+  padding-top: 2rem;
+}
+
+.greenCorner__GC__photos {
+  display: flex;
+}
+.greenCorner__tittle__GC {
+  font-size: 1.8rem;
+  color: #5d534a;
+  font-weight: 700;
+  margin-left: 5rem;
+  margin-top: 4rem;
+}
+
+.greenCorner__paragraph1 {
+  margin-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 12rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.greenCorner__GC__photo1 {
+  margin-top: 2rem;
+
+  width: 87%;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+}
+
+.greenCorner__GC__photo2 {
+  margin-top: 2rem;
+  width: 85%;
+  margin-bottom: 2rem;
+  margin-right: 6.5rem;
+}
