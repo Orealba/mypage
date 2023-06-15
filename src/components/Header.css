@@ -28,3 +28,19 @@
   margin-left: 13rem;
   margin-top: -1rem;
 }
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .header__background {
+    width: 100%;
+  }
+  .header__tittle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .header__description {
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    text-align: center;
+  }
+}
