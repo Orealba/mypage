@@ -6,16 +6,20 @@ import Navbar from './Navbar.js'
 const Header = () => {
   return (
     <div>
-      <div
-        className="header__background"
+      <section
+        className="lg:bg-contain sm:bg-contain  header__background"
         style={{ backgroundImage: `url(${headerBackground})` }}
       >
         <div className=" header__navbar">
           <Navbar />
         </div>
-        <div className="header__tittle">OREALBA SORIANO</div>
-        <div className="header__description">FULL-STACK DEVELOPER</div>
-      </div>
+        <div className="sm:text-4xl sm:text-start md:text-6xl lg:text-8xl xl:text-8xl  header__tittle">
+          OREALBA SORIANO
+        </div>
+        <div className="sm:text-xl sm:text-start md:text-3xl  lg:text-6xl xl:text-6xl xl:text-left header__description">
+          FULL-STACK DEVELOPER
+        </div>
+      </section>
     </div>
   )
 }
