@@ -4,7 +4,7 @@
   box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
 
   display: inline-block;
-  margin-top: -18rem;
+  margin-top: -19rem;
 }
 
 .header__navbar {
@@ -15,13 +15,13 @@
   font-family: 'Alata';
   font-weight: 400;
   color: #850808;
-  margin-top: 14rem;
-  margin-left: 5rem;
+  /* margin-top: 16rem;
+  margin-left: 5rem; */
 }
 
 .header__description {
   color: #5d534a;
   font-family: 'Alata';
 
-  margin-left: 13rem;
+  /* margin-left: 13rem; */
 }
