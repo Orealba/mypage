@@ -10,9 +10,9 @@ const Header = () => {
         className=" sm:bg-contain  md:bg-contain  lg:bg-auto  bg-no-repeat header__background"
         style={{ backgroundImage: `url(${headerBackground})` }}
       >
-        {/* <div className=" header__navbar">
+        <div className=" header__navbar">
           <Navbar />
-        </div> */}
+        </div>
         <div className="   sm:text-6xl  sm:text-start  md:text-6xl md:pl-20  lg:text-6xl lg:pt-60 lg:pl-20 lg:text-start xl:text-8xl xl:pt-60 xl:pl-20 xl:text-start header__tittle">
           OREALBA SORIANO
         </div>
