@@ -4,7 +4,7 @@ import '../components/Navbar.css'
 const Navbar = () => {
   return (
     <div>
-      <nav className="pl-16">
+      <nav className="navbar__large ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
             data-collapse-toggle="navbar-solid-bg"
@@ -31,37 +31,27 @@ const Navbar = () => {
             </svg>
           </button>
           <div
-            className="hidden w-full md:block md:w-auto"
+            className="hidden w-full md:block md:w-auto text-lg"
             id="navbar-solid-bg"
           >
-            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
               <li>
-                <a
-                  href="#"
-                  className="block   text-red-800 "
-                  aria-current="page"
-                >
+                <a href="#" className="block navbar__home" aria-current="page">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="block  text-red-800 ">
-                  Services
+                <a href="#" className="block">
+                  Who am I?
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Pricing
+                <a href="#" className="block">
+                  My works
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
+                <a href="#" className="block ">
                   Contact
                 </a>
               </li>
