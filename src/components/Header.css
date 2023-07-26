@@ -1,20 +1,10 @@
 .header__background {
   width: 100%;
-  height: 60rem;
+  height: 68rem;
   box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
 
   display: inline-block;
 }
 
 .header__navbar {
-  margin-top: 2rem;
-}
-
-.header__tittle {
-  color: #850808;
-}
-
-.header__description {
-  color: #5d534a;
-  font-family: 'Alata';
 }
