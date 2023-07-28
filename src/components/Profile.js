@@ -4,9 +4,9 @@ import OrealbaPhoto from '../images/OrealbaS.jpeg'
 
 const Profile = () => {
   return (
-    <div className=" bg-mybG profile__background">
+    <div className=" bg-mybG ">
       <div className="grid-col-12">
-        <h4 className="text-center text-xl text-myGrey profile__tittle">
+        <h4 className="text-center mt-8 font-semibold text-5xl text-myGrey profile__tittle">
           Who am I?
         </h4>
       </div>
@@ -45,11 +45,13 @@ const Profile = () => {
             </p>
           </p>
         </div>
-        <div></div>
       </div>
-      <div className="">
-        <div className="">
-          <button type="button" className="profile__button">
+      <div className="grid-col-6">
+        <div className="text-center">
+          <button
+            type="button"
+            className="  text-myGrey  border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5  mb-2 dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          >
             Shall we have a coffee?
           </button>
         </div>
