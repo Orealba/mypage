@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       myWine: '#850808',
       myGrey: '#5d534a',
+      myBg: '#ffffff',
     },
     extend: {
       fontFamily: {
