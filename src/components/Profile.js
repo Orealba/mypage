@@ -6,19 +6,19 @@ const Profile = () => {
   return (
     <div className=" bg-mybG ">
       <div>
-        <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey profile__tittle">
+        <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey">
           Who am I?
         </h4>
       </div>
-      <div className="md:flex lg:flex xl:flex  profile__photo__texts">
-        <div className="  grid-col-12 gap-12  profile__photo__Orealba ">
+      <div className="md:flex lg:flex xl:flex">
+        <div className="grid-col-12 gap-12">
           <img
             src={OrealbaPhoto}
-            className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md profile__photo__Orealba__style"
+            className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md"
           />
         </div>
         <div className="text-justify">
-          <p className="text-md lg:text-lg mt-20 pl-12 pr-20 profile__textOne">
+          <p className="text-md lg:text-lg mt-20 pl-12 pr-20">
             I am a <strong>Full-Stack developer</strong>, a graduate of 4Geeks
             Academy, with experience in journalism and social media. I have had
             the opportunity to learn various programming languages such as
@@ -33,7 +33,7 @@ const Profile = () => {
               Currently, I am seeking new job opportunities, whether remote,
               hybrid, or in-person in Barcelona.
             </p>
-            <p className="mt-12 profile__textOne__thirdParagraph">
+            <p className="mt-12">
               When it comes to my hobbies, I am passionate about several things,
               but mainly two: <strong>cinema</strong> and
               <strong> tennis</strong>. You can always count on me for a good
