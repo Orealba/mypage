@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <div className=" bg-mybG ">
       <div>
-        <h4 className="text-center mt-10 font-semibold text-3xl sm:text-5xl text-myGrey profile__tittle">
+        <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey profile__tittle">
           Who am I?
         </h4>
       </div>
@@ -14,7 +14,7 @@ const Profile = () => {
         <div className="  grid-col-12 gap-12  profile__photo__Orealba ">
           <img
             src={OrealbaPhoto}
-            className="mt-5 rounded-full max-w-xs col-span-2 ml-8 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md profile__photo__Orealba__style"
+            className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md profile__photo__Orealba__style"
           />
         </div>
         <div className="text-justify">

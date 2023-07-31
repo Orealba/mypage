@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <div
-        className="flex bg-no-repeat bg-contain header__background"
+        className="flex bg-no-repeat  bg-cover header__background"
         style={{ backgroundImage: `url(${headerBackground})` }}
       >
         <div className="mt-8">
