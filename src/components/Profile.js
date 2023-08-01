@@ -10,7 +10,7 @@ const Profile = () => {
           Who am I?
         </h4>
       </div>
-      <div className="md:flex lg:flex xl:flex">
+      <div className="md:flex">
         <div className="grid-col-12 gap-12">
           <img
             src={OrealbaPhoto}
