@@ -2,30 +2,23 @@ import React from 'react'
 
 import GreenCornerPhoto1 from '../images/GreenCornerPhoto1.png'
 import GreenCornerPhoto2 from '../images/GreenCornerPhoto2.png'
+
 const GreenCorner = () => {
   return (
     <div>
-      <div className="greenCorner__background ">
-        <div className="row">
-          <div className="col-md-12">
-            <h4 className="greenCorner__tittle"> My works</h4>
-            <h4 className="greenCorner__tittle__GC">GREEN CORNER</h4>
-          </div>
+      <div className="bg-myBgGrey">
+        <div>
+          <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey">
+            My works
+          </h4>
+          <h4 className="ml-8 sm:text-2xl text-myGrey">GREEN CORNER</h4>
         </div>
-        <div className="row greenCorner__GC__photos">
-          <div className="col-md-8">
-            <img src={GreenCornerPhoto1} className="greenCorner__GC__photo1" />
-          </div>
 
-          <div className="row">
-            <div className="col-md-12">
-              <img
-                src={GreenCornerPhoto2}
-                className="greenCorner__GC__photo2"
-              />
-            </div>
-          </div>
-        </div>
+        <center className="flex">
+          <img src={GreenCornerPhoto1} className="max-w-lg" />
+
+          <img src={GreenCornerPhoto2} className="max-w-lg" />
+        </center>
         <div className="col-md-4">
           <article className="format lg:format-lg">
             <p className="lead greenCorner__paragraph1">
