@@ -4,7 +4,7 @@ import OrealbaPhoto from '../images/OrealbaS.jpeg'
 
 const Profile = () => {
   return (
-    <div className=" bg-mybG ">
+    <div className="bg-mybG">
       <div>
         <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey">
           Who am I?
