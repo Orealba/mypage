@@ -1,4 +1,5 @@
 import './App.css'
+import Calendar from './components/Calendar'
 import GreenCorner from './components/GreenCorner'
 
 import Header from './components/Header'
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Profile />
       <GreenCorner />
+      <Calendar />
     </div>
   )
 }
