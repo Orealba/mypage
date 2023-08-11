@@ -33,7 +33,7 @@ const Calendar = () => {
         </div>
 
         <div className=" mr-5 mb-8">
-          <ReactPlayer url={video} />
+          <ReactPlayer url={video} controls />
         </div>
       </div>
     </div>
