@@ -4,12 +4,12 @@ import OrealbaPhoto from '../images/OrealbaS.jpeg'
 
 const Profile = () => {
   return (
-    <div className="bg-mybG">
-      <div>
+    <div className="bg-mybG container mx-auto">
+      
         <h4 className="text-center mt-10 font-semibold  sm:text-5xl text-myGrey">
           Who am I?
         </h4>
-      </div>
+      
       <div className="md:flex">
         <div className="grid-col-12 gap-12">
           <img

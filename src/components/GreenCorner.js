@@ -5,7 +5,7 @@ import GreenCornerPhoto2 from '../images/GreenCornerPhoto2.png'
 
 const GreenCorner = () => {
   return (
-    <div className="bg-myBgGrey container">
+    <div className="bg-myBgGrey container mx-auto">
       <div>
         <h4 className="text-center pt-10 font-semibold  sm:text-5xl text-myGrey">
           My works
