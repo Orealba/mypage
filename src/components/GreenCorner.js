@@ -5,7 +5,7 @@ import GreenCornerPhoto2 from '../images/GreenCornerPhoto2.png'
 
 const GreenCorner = () => {
   return (
-    <div className="bg-myBgGrey container mx-auto">
+    <div className="bg-myBgGrey container mx-auto shadow-myShadow">
       <div>
         <h4 className="text-center pt-10 font-semibold  sm:text-5xl text-myGrey">
           My works
@@ -16,7 +16,7 @@ const GreenCorner = () => {
       </div>
       <div>
         <center>
-          <img src={GreenCornerPhoto1} className="pl-8 pr-5 max-w-4xl" />
+          <img src={GreenCornerPhoto1} className="pl-8 pr-5 max-w-4xl rounded-3xl" />
         </center>
       </div>
 
@@ -41,7 +41,7 @@ const GreenCorner = () => {
       </div>
       <div>
         <center>
-          <img src={GreenCornerPhoto2} className="pl-5 pr-5 pb-5 max-w-4xl" />
+          <img src={GreenCornerPhoto2} className="pl-5 pr-5 pb-5 max-w-4xl rounded-3xl" />
         </center>
       </div>
     </div>
