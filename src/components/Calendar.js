@@ -4,7 +4,7 @@ import video from '../assets/videos/MyCalendarvideo.mov'
 
 const Calendar = () => {
   return (
-    <div className="container-fluid bg-mybG">
+    <div className="container mx-auto bg-mybG shadow-myShadow">
       <div>
         <h4 className="pl-8 pb-5 pt-8 sm:text-2xl font-semibold text-myGrey">
           MY CALENDAR

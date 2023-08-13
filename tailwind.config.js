@@ -16,7 +16,11 @@ module.exports = {
       fontFamily: {
         alata: ['Alata'],
         sanx: ['DM+Sans'],
+      
       },
+      boxShadow: {
+        'myShadow': '0 25px 25px 0 rgba(0, 0, 0, 0.15)'
+      }
     },
   },
   plugins: [require('flowbite/plugin')],
