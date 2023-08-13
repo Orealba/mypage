@@ -4,6 +4,7 @@ import GreenCorner from './components/GreenCorner'
 
 import Header from './components/Header'
 import Profile from './components/Profile'
+import Tito from './components/Tito'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Profile />
       <GreenCorner />
       <Calendar />
+      <Tito />
     </div>
   )
 }
