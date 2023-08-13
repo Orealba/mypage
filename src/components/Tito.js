@@ -4,12 +4,12 @@ import tito from '../images/tito.png'
 
 const Tito = () => {
   return (
-    <div className="bg-myBgGrey container mx-auto shadow-myShadow">
-      <div>
+    <div className="bg-myBgGrey  shadow-myShadow">
+      <div className='container mx-auto'>
         <h4 className="pl-8 pb-5 sm:text-2xl font-semibold pt-8 text-myGrey">
           TITO FREE
         </h4>
-      </div>
+      
 
       <div className="grid-col-12 p-12 text-md lg:text-lg">
         <p className="text-justify">
@@ -24,7 +24,7 @@ const Tito = () => {
       </div>
       <div>
         <center>
-          <img src={tito} className="pl-5 pr-5 pb-5 max-w-4xl rounded-3xl" />
+          <img src={tito} className="pl-5 pr-5 pb-5 lg:max-w-4xl rounded-3xl" />
         </center>
       </div>
       <div className="text-center">
@@ -36,6 +36,7 @@ const Tito = () => {
             More
           </button>
         </a>
+      </div>
       </div>
     </div>
   )

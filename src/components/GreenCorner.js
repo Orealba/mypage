@@ -5,18 +5,18 @@ import GreenCornerPhoto2 from '../images/GreenCornerPhoto2.png'
 
 const GreenCorner = () => {
   return (
-    <div className="bg-myBgGrey container mx-auto shadow-myShadow">
-      <div>
+    <div className="bg-myBgGrey shadow-myShadow">
+      <div className='container mx-auto'>
         <h4 className="text-center pt-10 font-semibold  sm:text-5xl text-myGrey">
           My works
         </h4>
         <h4 className="pl-8 pb-5 sm:text-2xl font-semibold text-myGrey">
           GREEN CORNER
         </h4>
-      </div>
+      
       <div>
         <center>
-          <img src={GreenCornerPhoto1} className="pl-8 pr-5 max-w-4xl rounded-3xl" />
+          <img src={GreenCornerPhoto1} className="pl-8 pr-5  lg:max-w-4xl rounded-3xl" />
         </center>
       </div>
 
@@ -41,8 +41,9 @@ const GreenCorner = () => {
       </div>
       <div>
         <center>
-          <img src={GreenCornerPhoto2} className="pl-5 pr-5 pb-5 max-w-4xl rounded-3xl" />
+          <img src={GreenCornerPhoto2} className="pl-5 pr-5 pb-5 lg:max-w-4xl rounded-3xl" />
         </center>
+      </div>
       </div>
     </div>
   )

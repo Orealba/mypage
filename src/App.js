@@ -1,5 +1,6 @@
 import './App.css'
 import Calendar from './components/Calendar'
+import Contact from './components/Contact'
 import GreenCorner from './components/GreenCorner'
 
 import Header from './components/Header'
@@ -14,6 +15,7 @@ function App() {
       <GreenCorner />
       <Calendar />
       <Tito />
+      <Contact />
     </div>
   )
 }
