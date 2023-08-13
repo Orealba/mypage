@@ -28,7 +28,7 @@ const Tito = () => {
         </center>
       </div>
       <div className="text-center">
-        <a to="https://github.com/Orealba?tab=repositories">
+        <a href="https://github.com/Orealba?tab=repositories">
           <button
             type="button"
             className="my-10 text-myGrey  border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5   dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
