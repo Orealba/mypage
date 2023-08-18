@@ -1,5 +1,6 @@
 import React from 'react'
-import GitIcon from '../images/git icon.png'
+import GitIcon from '../images/git.svg'
+import LinkIcon from '../images/link.svg'
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
           <div className="border-solid border-2 border-myWine my-12 mx-12">
             <div className=" ">
               <section class=" bg-white dark:bg-gray-900">
-                <div class=" lg:py-16 px-56 mx-auto max-w-screen-md">
+                <div class=" lg:py-16 px-60 mx-auto max-w-screen-md">
                   <form
                     action="#"
                     class="border-solid border-2 border-myWine py-8 px-8 space-y-8"
@@ -69,16 +70,19 @@ const Contact = () => {
                         Send message
                       </button>
                     </div>
-                    <div>
+                    <div className="flex">
                       <button type="submit">
-                        icono
-                        <image src={GitIcon}></image>
+                        <img src={GitIcon}></img>
+                      </button>
+                      <button type="submit">
+                        <img src={LinkIcon}></img>
                       </button>
                     </div>
                   </form>
                 </div>
               </section>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
