@@ -1,7 +1,7 @@
 import React from 'react'
 import GitIcon from '../images/git.svg'
 import LinkIcon from '../images/link.svg'
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Form = () => {
@@ -9,12 +9,9 @@ const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    
-    
-    
 
   
-    emailjs.sendForm(`${process.env.MY_SERVICE_ID_KEY}`, `${process.env.MY_TEMPLATE_ID_KEY}`, form.current, `${process.env.MY_PUBLIC_ID_KEY}`)
+    emailjs.sendForm(`${process.env.REACT_APP_MY_SERVICE_ID_KEY}`, `${process.env.REACT_APP_MY_TEMPLATE_ID_KEY}`, form.current, `${process.env.REACT_APP_MY_PUBLIC_ID_KEY}`)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
