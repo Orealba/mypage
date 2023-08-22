@@ -9,7 +9,12 @@ const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'Public Key')
+    
+    
+    
+
+  
+    emailjs.sendForm(`${process.env.MY_SERVICE_ID_KEY}`, `${process.env.MY_TEMPLATE_ID_KEY}`, form.current, `${process.env.MY_PUBLIC_ID_KEY}`)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
