@@ -22,17 +22,17 @@ const Form = () => {
 
    <div>
       <section className=" bg-white dark:bg-gray-900">
-        <div className="py-8 px-40 mx-auto max-w-screen-md">
+        <div className="  max-w-screen-md">
 
           <form
           ref={form} onSubmit={sendEmail}
             action="#"
-            className="   px-30  space-y-8 "
+            className=" space-y-8 "
           >
             <div>
               <label
                 for="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Your email
               </label>
@@ -81,18 +81,21 @@ const Form = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="text-center  my-4 text-myGrey  border     border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5   dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                className="text-center my-4 text-myGrey border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5   dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 Send message
               </button>
             </div>
             <div className="flex">
-              <button type="submit">
-                <img src={GitIcon}></img>
+              <button type="submit"
+              className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'>
+                <img src={GitIcon} className=''></img>
               </button>
               <button type="submit"
+              className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'
               value="Send">
-                <img src={LinkIcon}></img>
+                <img src={LinkIcon}
+                ></img>
               </button>
             </div>
           </form>
