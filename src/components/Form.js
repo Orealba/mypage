@@ -22,12 +22,12 @@ const Form = () => {
 
    <div>
       <section className=" bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 px-20 mx-auto max-w-screen-md">
+        <div className="py-8 px-40 mx-auto max-w-screen-md">
 
           <form
           ref={form} onSubmit={sendEmail}
             action="#"
-            className="border-2 border-myWine py-8 px-32  space-y-8 "
+            className="   px-30  space-y-8 "
           >
             <div>
               <label
