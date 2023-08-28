@@ -1,6 +1,6 @@
-import React from "react";
-import ReactPlayer from "react-player";
-import video from "../assets/videos/MyCalendarvideo.mov";
+import React from 'react';
+import ReactPlayer from 'react-player';
+import video from '../assets/videos/MyCalendarvideo.mov';
 
 const Calendar = () => {
   return (
@@ -33,7 +33,7 @@ const Calendar = () => {
           </div>
 
           <div className=" mr-5 mb-8 lg:order-2 order-1">
-            <ReactPlayer url={video} controls />
+            <ReactPlayer url={video} controls width="100%" height="100%" />
           </div>
         </div>
       </div>
