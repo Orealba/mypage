@@ -12,7 +12,7 @@ const Contact = () => {
             Shall we have a coffee?
           </h4>
 
-          <div className="flex flex flex-col sm:flex-row ">
+          <div className="flex flex-col sm:flex-row ">
             <div className="border-2 flex w-full flex-nowrap border-myWine my-12">
               <div className="w-full m-8 p-2 border-2  border-myWine ">
                 <Form />
@@ -23,7 +23,7 @@ const Contact = () => {
               <img
                 alt="contactForm"
                 src={ContactPhoto}
-                className="max-w-screen-sm my-12 "
+                className="none hidden md:block max-w-screen-sm my-12 "
               />
             </div>
           </div>

@@ -1,6 +1,6 @@
-import React from 'react'
-import GitIcon from '../images/git.svg'
-import LinkIcon from '../images/link.svg'
+import React from 'react';
+import GitIcon from '../images/git.svg';
+import LinkIcon from '../images/link.svg';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -9,23 +9,29 @@ const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-
-  
-    emailjs.sendForm(`${process.env.REACT_APP_MY_SERVICE_ID_KEY}`, `${process.env.REACT_APP_MY_TEMPLATE_ID_KEY}`, form.current, `${process.env.REACT_APP_MY_PUBLIC_ID_KEY}`)
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_MY_SERVICE_ID_KEY}`,
+        `${process.env.REACT_APP_MY_TEMPLATE_ID_KEY}`,
+        form.current,
+        `${process.env.REACT_APP_MY_PUBLIC_ID_KEY}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
-
-   <div>
+    <div>
       <section className=" bg-white dark:bg-gray-900">
         <div className="  max-w-screen-md">
-
           <form
-          ref={form} onSubmit={sendEmail}
+            ref={form}
+            onSubmit={sendEmail}
             action="#"
             className=" space-y-8 "
           >
@@ -37,12 +43,10 @@ const Form = () => {
                 Your email
               </label>
               <input
-              name="user_email"
+                name="user_email"
                 type="email"
                 id="email"
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-
-
                 placeholder="email..."
                 required
               />
@@ -86,34 +90,26 @@ const Form = () => {
                 Send message
               </button>
             </div>
-            <div className="flex">
-              <button type="submit"
-              className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'>
-                <img 
-                alt= "icon1" 
-                src={GitIcon} className='  '></img>
+            <div className="flex  justify-center">
+              <button
+                type="submit"
+                className="hover:opacity-100 hover:scale-110 opacity-60 transition-all"
+              >
+                <img alt="icon1" src={GitIcon} className="  "></img>
               </button>
-              <button type="submit"
-              className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'
-              value="Send">
-                <img
-                alt= "icon2"  src={LinkIcon}
-                ></img>
+              <button
+                type="submit"
+                className="hover:opacity-100 hover:scale-110 opacity-60 transition-all"
+                value="Send"
+              >
+                <img alt="icon2" src={LinkIcon}></img>
               </button>
             </div>
           </form>
         </div>
       </section>
     </div>
-    
-    
-      
-    
-      
-    
-      
-   
   );
 };
 
-export default Form
+export default Form;
