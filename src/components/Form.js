@@ -89,12 +89,15 @@ const Form = () => {
             <div className="flex">
               <button type="submit"
               className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'>
-                <img src={GitIcon} className=''></img>
+                <img 
+                alt= "icon1" 
+                src={GitIcon} className='  '></img>
               </button>
               <button type="submit"
               className='hover:opacity-100 hover:scale-110 opacity-60 transition-all'
               value="Send">
-                <img src={LinkIcon}
+                <img
+                alt= "icon2"  src={LinkIcon}
                 ></img>
               </button>
             </div>
