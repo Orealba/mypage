@@ -26,7 +26,7 @@ const Form = () => {
           form.current.reset();
           setTimeout(() => {
             setShowSuccessMessage(false);
-          }, 8000); // 8000 milisegundos (8 segundos)
+          }, 5000); // 8000 milisegundos (8 segundos)
         },
         (error) => {
           console.log(error.text);
@@ -102,19 +102,23 @@ const Form = () => {
               )}
             </div>
             <div className="flex  justify-center">
-              <button
-                type="submit"
+              <a
+                href="https://github.com/Orealba" // Reemplaza esto con la URL que desees
+                target="_blank" // Esto abrirá la URL en una nueva pestaña
+                rel="noopener noreferrer" // Buena práctica de seguridad para abrir enlaces externos
                 className="hover:opacity-100 hover:scale-110 opacity-60 transition-all"
               >
                 <img alt="icon1" src={GitIcon} className="  "></img>
-              </button>
-              <button
-                type="submit"
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/orealba/" // Reemplaza esto con la URL que desees
+                target="_blank" // Esto abrirá la URL en una nueva pestaña
+                rel="noopener noreferrer" // Buena práctica de seguridad para abrir enlaces externos
                 className="hover:opacity-100 hover:scale-110 opacity-60 transition-all"
-                value="Send"
               >
                 <img alt="icon2" src={LinkIcon}></img>
-              </button>
+              </a>
             </div>
           </form>
         </div>
