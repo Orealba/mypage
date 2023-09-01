@@ -15,7 +15,7 @@ const Header = () => {
           <Navbar />
         </div>
         <div>
-          <h1 className="text-3xl text-myWine  pl-14 font-alata text-start  md:text-5xl  md:pl-20 md:pt-20 lg:text-5xl lg:pt-60 lg:pl-16 xl:text-8xl   xl:mt-28">
+          <h1 className="text-3xl text-myWine  pl-14 font-alata text-start  md:text-5xl  md:pl-20 md:pt-20 lg:text-6xl lg:pt-60 lg:pl-16 xl:text-7xl   xl:mt-28">
             OREALBA SORIANO
           </h1>
         </div>

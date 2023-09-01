@@ -23,8 +23,8 @@ const GreenCorner = () => {
           </center>
         </div>
 
-        <div className="grid-col-12 p-12 text-md lg:text-lg">
-          <p className="text-justify">
+        <div className="grid-col-12 p-12 text-md ">
+          <p className="text-justify pb-5">
             This project was a collaborative effort to create a web application
             from scratch. Its purpose was to allow users to create, save, and
             edit their own plant collections, providing personalized watering
