@@ -1,11 +1,13 @@
 import React from 'react';
 import GitIcon from '../images/git.svg';
 import LinkIcon from '../images/link.svg';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Form = () => {
   const form = useRef();
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -19,6 +21,12 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result.text);
+
+          setShowSuccessMessage(true);
+          form.current.reset();
+          setTimeout(() => {
+            setShowSuccessMessage(false);
+          }, 8000); // 8000 milisegundos (8 segundos)
         },
         (error) => {
           console.log(error.text);
@@ -89,6 +97,9 @@ const Form = () => {
               >
                 Send message
               </button>
+              {showSuccessMessage && (
+                <p className="text-myWine">Form submitted successfully.</p>
+              )}
             </div>
             <div className="flex  justify-center">
               <button
