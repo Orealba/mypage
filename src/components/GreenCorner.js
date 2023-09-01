@@ -7,7 +7,7 @@ const GreenCorner = () => {
   return (
     <div id="works-section" className="bg-myBgGrey shadow-myShadow">
       <div className="container mx-auto">
-        <h4 className="text-center pt-10 font-semibold  sm:text-5xl text-myGrey">
+        <h4 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
           My works
         </h4>
         <h4 className="pl-8 pb-5 sm:text-2xl font-semibold text-myGrey">
@@ -17,13 +17,14 @@ const GreenCorner = () => {
         <div>
           <center>
             <img
+              alt="greencorner"
               src={GreenCornerPhoto1}
-              className="pl-8 pr-5  lg:max-w-4xl rounded-3xl"
+              className="pl-8 pr-5 lg:max-w-4xl rounded-3xl"
             />
           </center>
         </div>
 
-        <div className="grid-col-12 p-12 text-md ">
+        <div className="grid-col-12 p-12 text-md">
           <p className="text-justify pb-5">
             This project was a collaborative effort to create a web application
             from scratch. Its purpose was to allow users to create, save, and
@@ -45,6 +46,7 @@ const GreenCorner = () => {
         <div>
           <center>
             <img
+              alt="greenthecorner"
               src={GreenCornerPhoto2}
               className="pl-5 pr-5 pb-5 lg:max-w-4xl rounded-3xl"
             />

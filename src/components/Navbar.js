@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="pl-12 navbar__large">
-        <div className=" flex flex-wrap items-center justify-between mx-auto ">
+        <div className="flex flex-wrap items-center justify-between mx-auto">
           <button
             data-collapse-toggle="navbar-solid-bg"
             type="button"

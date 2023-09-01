@@ -4,7 +4,7 @@ import OrealbaPhoto from '../images/OrealbaS.jpeg';
 
 const Profile = () => {
   return (
-    <div id="WhoamI-section" className="bg-mybG  shadow-myShadow ">
+    <div id="WhoamI-section" className="bg-mybG shadow-myShadow ">
       <div className="container mx-auto">
         <h4 className="text-center mt-20 font-semibold  sm:text-5xl text-myGrey">
           Who am I?
@@ -18,8 +18,8 @@ const Profile = () => {
               className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md"
             />
           </div>
-          <div className="text-justify text-md  mt-20 pl-12 pr-20">
-            <p className="">
+          <div className="text-justify text-md mt-20 pl-12 pr-20">
+            <p>
               I am a <strong>Full-Stack developer</strong>, a graduate of 4Geeks
               Academy, with experience in journalism and social media. I have
               had the opportunity to learn various programming languages such as
@@ -54,7 +54,7 @@ const Profile = () => {
           <div className="text-center">
             <button
               type="button"
-              className="my-10 text-myGrey  border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5   dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              className="my-10 text-myGrey  border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
               Shall we have a coffee?
             </button>

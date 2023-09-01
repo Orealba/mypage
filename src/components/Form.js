@@ -1,4 +1,3 @@
-import React from 'react';
 import GitIcon from '../images/git.svg';
 import LinkIcon from '../images/link.svg';
 import { useRef, useState } from 'react';
@@ -35,18 +34,18 @@ const Form = () => {
   };
   return (
     <div>
-      <section className=" bg-white dark:bg-gray-900">
-        <div className="  max-w-screen-md">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="max-w-screen-md">
           <form
             ref={form}
             onSubmit={sendEmail}
             action="#"
-            className=" space-y-8 "
+            className="space-y-8 "
           >
             <div>
               <label
                 htmlFor="email"
-                className=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
                 Your email
               </label>
@@ -70,7 +69,7 @@ const Form = () => {
                 type="text"
                 name="user_subject"
                 id="subject"
-                className=" block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="Let me know how I can help you..."
                 required
               />
@@ -93,7 +92,7 @@ const Form = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="text-center my-4 text-myGrey border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5   dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                className="text-center my-4 text-myGrey border border-myWine focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-2xl text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-myWine dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 Send message
               </button>
@@ -101,7 +100,7 @@ const Form = () => {
                 <p className="text-myWine">Form submitted successfully.</p>
               )}
             </div>
-            <div className="flex  justify-center">
+            <div className="flex justify-center">
               <a
                 href="https://github.com/Orealba" // Reemplaza esto con la URL que desees
                 target="_blank" // Esto abrirá la URL en una nueva pestaña
