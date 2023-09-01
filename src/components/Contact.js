@@ -12,14 +12,14 @@ const Contact = () => {
             Shall we have a coffee?
           </h4>
 
-          <div className="flex flex-col sm:flex-row ">
+          <div className="flex flex-row">
             <div className="border-2 flex w-full flex-nowrap border-myWine my-12">
               <div className="w-full m-8 p-2 border-2  border-myWine ">
                 <Form />
               </div>
             </div>
 
-            <div className="w-full">
+            <div className="hidden lg:block w-full">
               <img
                 alt="contactForm"
                 src={ContactPhoto}
