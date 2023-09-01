@@ -1,5 +1,3 @@
-import { Link, BrowserRouter } from 'react-router-dom';
-
 const Footer = () => {
   return (
     <div>
@@ -12,33 +10,36 @@ const Footer = () => {
           <div class="sm:flex ">
             <ul class="flex items-end flex-wrap  mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 ">
               <li>
-                {/* < <Link
-                  to="./Contact.js"
+                <a
+                  href="#home-section"
                   class="mr-4 hover:underline md:mr-6  text-myGrey"
                 >
                   Home
-                </Link> */}
+                </a>
               </li>
               <li>
-                <Link
-                  to="/Profile#WhoamI?-section"
+                <a
+                  href="#WhoamI-section"
                   class="mr-4 hover:underline md:mr-6  text-myWine "
                 >
                   Who am I?
-                </Link>
+                </a>
               </li>
               <li>
-                {/* <a
-                    href="#"
-                    class="mr-4 hover:underline md:mr-6  text-myWine "
-                  >
-                    My works
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline  text-myWine ">
-                    Contact
-                  </a> */}
+                <a
+                  href="#works-section"
+                  class="mr-4 hover:underline md:mr-6  text-myWine "
+                >
+                  My works
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact-section"
+                  class="hover:underline  text-myWine "
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>

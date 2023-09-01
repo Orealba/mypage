@@ -11,17 +11,17 @@ module.exports = {
       myGrey: '#5d534a',
       myBg: '#ffffff',
       myBgGrey: '#F0F0F0',
+      greyFoot: '#D9D9D9',
     },
     extend: {
       fontFamily: {
         alata: ['Alata'],
         sanx: ['DM+Sans'],
-      
       },
       boxShadow: {
-        'myShadow': '0 25px 25px 0 rgba(0, 0, 0, 0.15)'
-      }
+        myShadow: '0 25px 25px 0 rgba(0, 0, 0, 0.15)',
+      },
     },
   },
   plugins: [require('flowbite/plugin')],
-}
+};

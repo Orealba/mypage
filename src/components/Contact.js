@@ -5,7 +5,7 @@ import ContactPhoto from '../images/ContactPhoto.jpg';
 
 const Contact = () => {
   return (
-    <div className="p-12 bg-mybG shadow-myShadow ">
+    <div id="contact-section" className="p-12 bg-mybG shadow-myShadow ">
       <div className="container mx-auto ">
         <div>
           <h4 className="text-center pt-10 font-semibold  sm:text-5xl text-myGrey">
