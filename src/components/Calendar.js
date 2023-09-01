@@ -4,7 +4,7 @@ import video from '../assets/videos/MyCalendarvideo.mov';
 
 const Calendar = () => {
   return (
-    <div className=" bg-mybG shadow-myShadow">
+    <div className="bg-mybG shadow-myShadow">
       <div className="container mx-auto">
         <h4 className="pl-8 pb-5 pt-8 sm:text-2xl font-semibold text-myGrey">
           MY CALENDAR
@@ -32,7 +32,7 @@ const Calendar = () => {
             </p>
           </div>
 
-          <div className=" mr-5 mb-8 lg:order-2 order-1">
+          <div className="mr-5 mb-8 lg:order-2 order-1">
             <ReactPlayer url={video} controls width="100%" height="100%" />
           </div>
         </div>
