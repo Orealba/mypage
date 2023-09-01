@@ -1,5 +1,5 @@
-import React from 'react'
-import '../components/Navbar.css'
+import React from 'react';
+import '../components/Navbar.css';
 
 const Navbar = () => {
   return (
@@ -36,22 +36,26 @@ const Navbar = () => {
           >
             <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
               <li>
-                <a href="#" className="block navbar__home" aria-current="page">
+                <a
+                  href="#home-section"
+                  className="block navbar__home"
+                  aria-current="page"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="block">
+                <a href="#WhoamI-section" className="block">
                   Who am I?
                 </a>
               </li>
               <li>
-                <a href="#" className="block">
+                <a href="#works-section" className="block">
                   My works
                 </a>
               </li>
               <li>
-                <a href="#" className="block ">
+                <a href="#contact-section" className="block ">
                   Contact
                 </a>
               </li>
@@ -60,6 +64,6 @@ const Navbar = () => {
         </div>
       </nav>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;

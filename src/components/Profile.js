@@ -13,6 +13,7 @@ const Profile = () => {
         <div className="md:flex">
           <div className="grid-col-12 gap-12">
             <img
+              alt="foto"
               src={OrealbaPhoto}
               className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md"
             />
@@ -25,26 +26,25 @@ const Profile = () => {
               <strong> HTML, JavaScript (React), CSS, Python</strong>, among
               others, which has allowed me to create innovative projects that I
               never thought possible.
-              <p className="mt-12">
-                I am a responsible, passionate, and dedicated individual in
-                everything I do. Programming has become my new passion, and I am
-                excited to continue growing in this field and taking on new
-                challenges. I love writing code and discovering new ways to do
-                so. Currently, I am seeking new job opportunities, whether
-                remote, hybrid, or in-person in Barcelona.
-              </p>
-              <p className="mt-12">
-                When it comes to my hobbies, I am passionate about several
-                things, but mainly two: <strong>cinema</strong> and
-                <strong> tennis</strong>. You can always count on me for a good
-                conversation about any kind of movie, and I love immersing
-                myself in the world of tennis, both by practicing it and
-                attending tournaments. I also enjoy painting, reading, swimming,
-                and traveling around the world. I don't like staying still and
-                doing the same thing all the time; I consider myself open to
-                engaging in various activities to expand my knowledge and
-                experiences.
-              </p>
+            </p>
+            <p className="mt-12">
+              I am a responsible, passionate, and dedicated individual in
+              everything I do. Programming has become my new passion, and I am
+              excited to continue growing in this field and taking on new
+              challenges. I love writing code and discovering new ways to do so.
+              Currently, I am seeking new job opportunities, whether remote,
+              hybrid, or in-person in Barcelona.
+            </p>
+            <p className="mt-12">
+              When it comes to my hobbies, I am passionate about several things,
+              but mainly two: <strong>cinema</strong> and
+              <strong> tennis</strong>. You can always count on me for a good
+              conversation about any kind of movie, and I love immersing myself
+              in the world of tennis, both by practicing it and attending
+              tournaments. I also enjoy painting, reading, swimming, and
+              traveling around the world. I don't like staying still and doing
+              the same thing all the time; I consider myself open to engaging in
+              various activities to expand my knowledge and experiences.
             </p>
           </div>
         </div>
