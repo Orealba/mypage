@@ -1,12 +1,13 @@
-import React from 'react'
-import '../components/Header.css'
-import headerBackground from '../images/headerBackground.webp'
-import Navbar from './Navbar.js'
+import React from 'react';
+import '../components/Header.css';
+import headerBackground from '../images/headerBackground.webp';
+import Navbar from './Navbar.js';
 
 const Header = () => {
   return (
     <div>
       <div
+        id="home-section"
         className="flex bg-no-repeat  bg-cover h-48 md:h-[26rem] lg:h-[60rem] shadow-myShadow header__background"
         style={{ backgroundImage: `url(${headerBackground})` }}
       >
@@ -25,7 +26,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

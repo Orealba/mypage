@@ -1,10 +1,10 @@
-import React from "react";
-import "../components/Profile.css";
-import OrealbaPhoto from "../images/OrealbaS.jpeg";
+import React from 'react';
+import '../components/Profile.css';
+import OrealbaPhoto from '../images/OrealbaS.jpeg';
 
 const Profile = () => {
   return (
-    <div className="bg-mybG  shadow-myShadow">
+    <div id="WhoamI-section" className="bg-mybG  shadow-myShadow ">
       <div className="container mx-auto">
         <h4 className="text-center mt-20 font-semibold  sm:text-5xl text-myGrey">
           Who am I?
