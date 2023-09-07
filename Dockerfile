@@ -13,8 +13,10 @@ RUN npm install
 # Construye la aplicación React para producción
 RUN npm run build
 
+RUN npm install -g serve
+
 # Expón el puerto en el que se ejecutará la aplicación
 EXPOSE 3000
 
 # Comando para ejecutar la aplicación cuando el contenedor se inicia
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
