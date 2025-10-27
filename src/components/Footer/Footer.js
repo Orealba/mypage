@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Footer = () => {
   return (
     <div>
@@ -12,32 +14,28 @@ const Footer = () => {
               <li>
                 <a
                   href="#home-section"
-                  className="mr-4 hover:underline md:mr-6 text-myGrey"
-                >
+                  className="mr-4 hover:underline md:mr-6 text-myGrey">
                   Home
                 </a>
               </li>
               <li>
                 <a
                   href="#WhoamI-section"
-                  className="mr-4 hover:underline md:mr-6 text-myWine"
-                >
+                  className="mr-4 hover:underline md:mr-6 text-myWine">
                   Who am I?
                 </a>
               </li>
               <li>
                 <a
                   href="#works-section"
-                  className="mr-4 hover:underline md:mr-6 text-myWine"
-                >
+                  className="mr-4 hover:underline md:mr-6 text-myWine">
                   My works
                 </a>
               </li>
               <li>
                 <a
                   href="#contact-section"
-                  className="hover:underline text-myWine"
-                >
+                  className="hover:underline text-myWine">
                   Contact
                 </a>
               </li>

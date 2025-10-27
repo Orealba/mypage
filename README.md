@@ -8,6 +8,31 @@ Welcome to my personal website! This project represents my effort to create an o
 - Tailwind CSS: Used for website design and styles, providing an attractive and modern appearance.
 - Flowbite: A library of Tailwind CSS components that simplifies UI development.
 
+## Project Structure
+
+```
+src/
+├── assets/
+│   ├── images/
+│   │   ├── icons/        # SVG icons (git, linkedin, etc.)
+│   │   └── photos/       # Images (JPG, PNG, WEBP)
+│   └── videos/           # Video files
+├── components/           # React components
+│   ├── Calendar/
+│   ├── Contact/
+│   ├── Footer/
+│   ├── Form/
+│   ├── GreenCorner/
+│   ├── Header/           # With Header.css
+│   ├── Navbar/           # With Navbar.css
+│   ├── Profile/          # With Profile.css
+│   └── Tito/
+├── styles/               # Global styles
+│   ├── App.css
+│   └── index.css
+└── ...
+```
+
 ## How to Use
 
 1. Clone this repository to your local machine.

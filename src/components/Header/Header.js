@@ -1,7 +1,7 @@
 import React from 'react';
-import '../components/Header.css';
-import headerBackground from '../images/headerBackground.webp';
-import Navbar from './Navbar.js';
+import './Header.css';
+import headerBackground from '../../assets/images/photos/headerBackground.webp';
+import Navbar from '../Navbar/Navbar.js';
 
 const Header = () => {
   return (
@@ -9,8 +9,7 @@ const Header = () => {
       <div
         id="home-section"
         className="flex bg-no-repeat bg-cover h-48 md:h-[26rem] lg:h-[60rem] shadow-myShadow header__background"
-        style={{ backgroundImage: `url(${headerBackground})` }}
-      >
+        style={{ backgroundImage: `url(${headerBackground})` }}>
         <div className="mt-8">
           <Navbar />
         </div>
@@ -21,7 +20,8 @@ const Header = () => {
         </div>
         <div>
           <h2 className="text-md text-start font-alata text-myGrey pl-16 md:text-2xl md:pl-20 lg:text-4xl xl:text-5xl ">
-            FULL-STACK DEVELOPER
+            FRONTEND DEVELOPER
+            <br />& JOURNALIST
           </h2>
         </div>
       </div>

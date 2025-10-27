@@ -1,11 +1,12 @@
 import React from 'react';
-import Form from './Form';
-
-import ContactPhoto from '../images/ContactPhoto.jpg';
+import Form from '../Form/Form';
+import ContactPhoto from '../../assets/images/photos/ContactPhoto.jpg';
 
 const Contact = () => {
   return (
-    <div id="contact-section" className="p-12 bg-mybG shadow-myShadow">
+    <div
+      id="contact-section"
+      className="p-12 bg-mybG shadow-myShadow">
       <div className="container mx-auto">
         <div>
           <h4 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
