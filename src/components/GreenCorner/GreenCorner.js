@@ -1,11 +1,12 @@
 import React from 'react';
-
-import GreenCornerPhoto1 from '../images/GreenCornerPhoto1.png';
-import GreenCornerPhoto2 from '../images/GreenCornerPhoto2.png';
+import GreenCornerPhoto1 from '../../assets/images/photos/GreenCornerPhoto1.png';
+import GreenCornerPhoto2 from '../../assets/images/photos/GreenCornerPhoto2.png';
 
 const GreenCorner = () => {
   return (
-    <div id="works-section" className="bg-myBgGrey shadow-myShadow">
+    <div
+      id="works-section"
+      className="bg-myBgGrey shadow-myShadow">
       <div className="container mx-auto">
         <h4 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
           My works
