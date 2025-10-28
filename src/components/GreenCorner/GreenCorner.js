@@ -12,46 +12,63 @@ const GreenCorner = () => {
           My works
         </h4>
         <h4 className="pl-8 pb-5 sm:text-2xl font-semibold text-myGrey">
-          GREEN CORNER
+          CARTOS APP
         </h4>
 
-        <div>
-          <center>
-            <img
-              alt="greencorner"
-              src={GreenCornerPhoto1}
-              className="pl-8 pr-5 lg:max-w-4xl rounded-3xl"
-            />
-          </center>
+        {/* Fila 1: texto izquierda, imagen derecha */}
+        <div className="p-8">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="md:w-1/2 text-md">
+              <p className="text-justify pb-5">
+                I developed a web application to help users manage expenses and
+                income in a simple, visual way—allowing them to record
+                transactions, schedule payments, and view all their data on an
+                interactive calendar. I also designed automatic summaries with
+                charts to show where most spending has occurred over a selected
+                period. I came up with the idea and built the interface using{' '}
+                <strong>React </strong>
+                and <strong>TypeScript</strong>, with{' '}
+                <strong>Tailwind CSS </strong>
+                and <strong>Flowbite</strong> to achieve a modern, functional
+                design.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                alt="greencorner"
+                src={GreenCornerPhoto1}
+                className="w-full max-w-2xl rounded-3xl"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="grid-col-12 p-12 text-md">
-          <p className="text-justify pb-5">
-            This project was a collaborative effort to create a web application
-            from scratch. Its purpose was to allow users to create, save, and
-            edit their own plant collections, providing personalized watering
-            reminders based on a reference <strong>database</strong>.
-          </p>
-          <p className="text-justify">
-            I primarily focused on front-end development, utilizing
-            <strong> JavaScript </strong>
-            with <strong>React</strong> as the main technologies. Additionally,
-            I implemented the back-end using <strong>Python</strong>. We created
-            a plant
-            <strong> API</strong> that provided necessary information to users
-            and connected it with a custom-built calendar. This integration
-            enabled the creation of reminders based on the data provided by our
-            <strong> API</strong>.
-          </p>
-        </div>
-        <div>
-          <center>
-            <img
-              alt="greenthecorner"
-              src={GreenCornerPhoto2}
-              className="pl-5 pr-5 pb-5 lg:max-w-4xl rounded-3xl"
-            />
-          </center>
+        {/* Fila 2: imagen izquierda, texto derecha */}
+        <div className="px-8 pb-8">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="md:w-1/2 order-last md:order-first">
+              <img
+                alt="greenthecorner"
+                src={GreenCornerPhoto2}
+                className="w-full max-w-2xl rounded-3xl"
+              />
+            </div>
+            <div className="md:w-1/2 text-md">
+              <p className="text-justify">
+                On the backend, I collaborated to connect the app with a custom
+                <strong>API </strong>
+                and <strong>Supabase</strong>, handling
+                <strong> authentication</strong>, <strong> security</strong>,
+                and protected user
+                <strong> sessions</strong>. The project includes advanced form
+                management,
+                <strong> secure routes</strong>, and an optimized
+                <strong> user experience</strong>, with access currently
+                restricted while we finish integrating categories and advanced
+                features. Development is still ongoing.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
