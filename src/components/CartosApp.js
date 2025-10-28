@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<<< HEAD:src/components/GreenCorner/GreenCorner.js
-import GreenCornerPhoto1 from '../../assets/images/photos/GreenCornerPhoto1.png';
-import GreenCornerPhoto2 from '../../assets/images/photos/GreenCornerPhoto2.png';
-========
 
-import cartos from '../images/cartos.png';
-import cartosapp from '../images/cartosApp.png';
->>>>>>>> 3b77408 (cartos section ready):src/components/CartosApp.js
+import cartos from '../assets/images/photos/cartos.png';
+import cartosapp from '../assets/images/photos/cartosApp.png';
 
 const CartosApp = () => {
   return (
