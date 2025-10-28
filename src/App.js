@@ -1,18 +1,19 @@
-import Footer from './components/Footer/Footer';
-import './styles/App.css';
-import Calendar from './components/Calendar/Calendar';
-import Contact from './components/Contact/Contact';
-import GreenCorner from './components/GreenCorner/GreenCorner';
-import Header from './components/Header/Header';
-import Profile from './components/Profile/Profile';
-import Tito from './components/Tito/Tito';
+import Footer from './components/Footer';
+import './App.css';
+import Calendar from './components/Calendar';
+import Contact from './components/Contact';
+import CartosApp from './components/CartosApp';
+
+import Header from './components/Header';
+import Profile from './components/Profile';
+import Tito from './components/Tito';
 
 function App() {
   return (
     <div>
       <Header />
       <Profile />
-      <GreenCorner />
+      <CartosApp />
       <Calendar />
       <Tito />
       <Contact />
