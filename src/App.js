@@ -1,8 +1,9 @@
 import Footer from './components/Footer/Footer';
-import './styles/App.css';
-import Calendar from './components/Calendar/Calendar';
+import './styles/index.css';
+
 import Contact from './components/Contact/Contact';
-import GreenCorner from './components/GreenCorner/GreenCorner';
+import CartosApp from './components/CartosApp';
+
 import Header from './components/Header/Header';
 import Profile from './components/Profile/Profile';
 import Tito from './components/Tito/Tito';
@@ -12,8 +13,8 @@ function App() {
     <div>
       <Header />
       <Profile />
-      <GreenCorner />
-      <Calendar />
+      <CartosApp />
+     
       <Tito />
       <Contact />
       <Footer />
