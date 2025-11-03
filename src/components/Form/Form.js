@@ -2,7 +2,7 @@ import GitIcon from '../../assets/images/icons/git.svg';
 import LinkIcon from '../../assets/images/icons/link.svg';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-
+import instagram from '../../assets/images/icons/instagram.svg';
 const Form = () => {
   const form = useRef();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -114,6 +114,15 @@ const Form = () => {
                 <img
                   alt="icon2"
                   src={LinkIcon}></img>
+              </a>
+              <a
+                href="https://www.instagram.com/ores.tennisjournal/" // Reemplaza esto con la URL que desees
+                target="_blank" // Esto abrirá la URL en una nueva pestaña
+                rel="noopener noreferrer" // Buena práctica de seguridad para abrir enlaces externos
+                className="hover:opacity-100 hover:scale-110 opacity-60 transition-all">
+                <img
+                  alt="icon2"
+                  src={instagram}></img>
               </a>
             </div>
           </form>
