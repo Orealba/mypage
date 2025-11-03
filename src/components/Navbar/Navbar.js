@@ -1,7 +1,11 @@
 import React from 'react';
 import './Navbar.css';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <nav className="pl-12 navbar__large">
@@ -28,40 +32,43 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <div
-            className="hidden w-full md:block md:w-auto text-lg"
-            id="navbar-solid-bg">
-            <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
-              <li>
-                <a
-                  href="#home-section"
-                  className="block navbar__home"
-                  aria-current="page">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#WhoamI-section"
-                  className="block">
-                  Who am I?
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#works-section"
-                  className="block">
-                  My works
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact-section"
-                  className="block ">
-                  Contact
-                </a>
-              </li>
-            </ul>
+          <div className="flex items-center gap-4">
+            <div
+              className="hidden w-full md:block md:w-auto text-lg"
+              id="navbar-solid-bg">
+              <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+                <li>
+                  <a
+                    href="#home-section"
+                    className="block navbar__home"
+                    aria-current="page">
+                    {t('nav.home')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#WhoamI-section"
+                    className="block">
+                    {t('nav.who')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#works-section"
+                    className="block">
+                    {t('nav.works')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact-section"
+                    className="block ">
+                    {t('nav.contact')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <LanguageSelector />
           </div>
         </div>
       </nav>

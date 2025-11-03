@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Form from '../Form/Form';
 import ContactPhoto from '../../assets/images/photos/ContactPhoto.jpg';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       id="contact-section"
@@ -10,7 +13,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div>
           <h4 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
-            Shall we have a coffee?
+            {t('contact.title')}
           </h4>
 
           <div className="flex flex-row">
