@@ -4,3 +4,44 @@
   display: inline-block;
   background-position: 100% 0;
 }
+
+.header-letter {
+  transition: transform 0.3s ease;
+}
+
+.header-letter:hover {
+  animation: letterJump 0.6s ease;
+  transform: translateY(-10px);
+}
+
+.header-letter-title {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-letter-title:hover {
+  animation: letterJump 0.6s ease;
+  transform: translateY(-10px);
+  color: #5d534a;
+}
+
+.header-letter-subtitle {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-letter-subtitle:hover {
+  animation: letterJump 0.6s ease;
+  transform: translateY(-10px);
+  color: #850808;
+}
+
+@keyframes letterJump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
