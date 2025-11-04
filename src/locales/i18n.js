@@ -9,6 +9,9 @@ const resources = {
       'nav.home': 'Home',
       'nav.who': 'Who am I?',
       'nav.works': 'My works',
+      'nav.cv': 'CV',
+      'nav.cvDeveloper': "Developer's cv",
+      'nav.cvJournalist': "Journalist's cv",
       'nav.contact': 'Contact',
 
       // Profile
@@ -78,6 +81,9 @@ const resources = {
       'nav.home': 'Inicio',
       'nav.who': '¿Quién soy?',
       'nav.works': 'Mis trabajos',
+      'nav.cv': 'CV',
+      'nav.cvDeveloper': 'Cv Desarrolladora',
+      'nav.cvJournalist': 'Cv Periodista',
       'nav.contact': 'Contacto',
 
       // Profile
