@@ -22,7 +22,7 @@ const Profile = () => {
               className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md"
             />
           </div>
-          <div className="text-justify text-md mt-20 pl-12 pr-20">
+          <div className="text-justify text-md mt-16 pl-12 pr-20">
             <p>
               <Trans
                 i18nKey="profile.text1"
@@ -30,14 +30,14 @@ const Profile = () => {
               />
             </p>
 
-            <p className="mt-12">
+            <p className="mt-8">
               <Trans
                 i18nKey="profile.text2"
                 components={{ strong: <strong /> }}
               />
             </p>
 
-            <p className="mt-12">
+            <p className="mt-8">
               <Trans
                 i18nKey="profile.text3"
                 components={{ strong: <strong /> }}
@@ -45,7 +45,7 @@ const Profile = () => {
             </p>
           </div>
         </div>
-        <div className="pt-12">
+        <div className="pt-5">
           <div className="text-center py-12">
             <a
               href="#contact-section"

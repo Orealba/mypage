@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import headerBackground from '../../assets/images/photos/headerBackground.webp';
 import Navbar from '../Navbar/Navbar.js';
 import { useTranslation } from 'react-i18next';
+
+const Letter = ({ letter, className, animationDelay, isSpace }) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+      setTimeout(() => {
+        setHasAnimated(false);
+      }, 600);
+    }
+  };
+
+  return (
+    <span className="header-letter-wrapper inline-block">
+      <span
+        className={`${className} inline-block cursor-default ${
+          hasAnimated ? 'animate-once' : ''
+        }`}
+        style={{ animationDelay }}
+        onMouseEnter={handleMouseEnter}>
+        {isSpace ? '\u00A0' : letter}
+      </span>
+    </span>
+  );
+};
 
 const Header = () => {
   const { t } = useTranslation();
 
   const title = t('header.title');
   const titleLetters = title.split('').map((letter, index) => (
-    <span
+    <Letter
       key={index}
-      className="header-letter-title inline-block cursor-default"
-      style={{ animationDelay: `${index * 0.05}s` }}>
-      {letter === ' ' ? '\u00A0' : letter}
-    </span>
+      letter={letter}
+      className="header-letter-title"
+      animationDelay={`${index * 0.05}s`}
+      isSpace={letter === ' '}
+    />
   ));
 
   const subtitle = t('header.subtitle');
@@ -24,12 +51,13 @@ const Header = () => {
     const partLetters = part.split('').map((letter) => {
       const currentIndex = letterIndex++;
       return (
-        <span
+        <Letter
           key={`subtitle-${partIndex}-${currentIndex}`}
-          className="header-letter-subtitle inline-block cursor-default"
-          style={{ animationDelay: `${currentIndex * 0.05}s` }}>
-          {letter === ' ' ? '\u00A0' : letter}
-        </span>
+          letter={letter}
+          className="header-letter-subtitle"
+          animationDelay={`${currentIndex * 0.05}s`}
+          isSpace={letter === ' '}
+        />
       );
     });
 
