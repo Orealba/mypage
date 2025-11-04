@@ -28,10 +28,10 @@ const CartosApp = () => {
         </h4>
 
         {/* Fila 1: texto izquierda, imagen derecha */}
-        <div className="p-8">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="md:w-1/2 text-md">
-              <p className="text-justify pb-5">
+        <div className="p-5">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="md:w-1/2 text-md md:pr-4">
+              <p className="text-justify pb-1">
                 <Trans
                   i18nKey="cartos.text1"
                   components={{ strong: <strong /> }}
@@ -46,7 +46,7 @@ const CartosApp = () => {
                 <img
                   alt="cartosApp"
                   src={cartos}
-                  className="w-full max-w-2xl rounded-3xl"
+                  className="w-full max-w-xl rounded-3xl"
                 />
               </a>
             </div>
@@ -54,7 +54,7 @@ const CartosApp = () => {
         </div>
 
         {/* Fila 2: imagen izquierda, texto derecha */}
-        <div className="px-8 pb-8">
+        <div className="px-8 ">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="md:w-1/2 order-last md:order-first">
               <a
@@ -64,7 +64,7 @@ const CartosApp = () => {
                 <img
                   alt="greenthecorner"
                   src={cartosapp}
-                  className="w-full max-w-2xl rounded-3xl"
+                  className="w-full max-w-xl rounded-3xl"
                 />
               </a>
             </div>
@@ -77,7 +77,7 @@ const CartosApp = () => {
               </p>
             </div>
           </div>
-          <div className="text-center mt-25">
+          <div className="text-center ">
             <a
               href="https://cartos-app.com/"
               target="_blank"

@@ -17,8 +17,8 @@ const Redes = () => {
 
         {/* Fila: texto izquierda, imagen derecha */}
         <div className="p-8">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="md:w-1/2 text-md">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="md:w-1/2 text-md md:pr-4">
               <p className="text-justify pb-5">
                 <Trans
                   i18nKey="redes.text"
@@ -34,7 +34,7 @@ const Redes = () => {
                 <img
                   alt="redes"
                   src={redes}
-                  className="w-full max-w-2xl rounded-3xl border border-gray-200"
+                  className="w-full max-w-xl rounded-3xl border border-gray-200"
                 />
               </a>
             </div>
