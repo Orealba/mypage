@@ -4,3 +4,75 @@
   display: inline-block;
   background-position: 100% 0;
 }
+
+.header-letter {
+  transition: transform 0.3s ease;
+}
+
+.header-letter:hover {
+  animation: letterJump 0.6s ease;
+  transform: translateY(-10px);
+}
+
+/* Contenedor que mantiene el espacio fijo */
+.header-letter-wrapper {
+  display: inline-block;
+  position: relative;
+  height: 1em;
+  overflow: visible;
+  vertical-align: baseline;
+  line-height: 1em;
+}
+
+.header-letter-title {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease, font-family 0.3s ease,
+    font-weight 0.3s ease;
+  will-change: transform;
+  vertical-align: baseline;
+  transform-origin: center bottom;
+}
+
+.header-letter-subtitle {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease, font-family 0.3s ease,
+    font-weight 0.3s ease;
+  will-change: transform;
+  vertical-align: baseline;
+  transform-origin: center bottom;
+}
+
+.header-letter-title:hover,
+.header-letter-subtitle:hover {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.header-letter-title.animate-once {
+  animation: letterJump 0.6s ease 1;
+  color: #5d534a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+.header-letter-subtitle.animate-once {
+  animation: letterJump 0.6s ease 1;
+  color: #850808;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+@keyframes letterJump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

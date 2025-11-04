@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Form from '../Form/Form';
-import ContactPhoto from '../../assets/images/photos/ContactPhoto.jpg';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -17,18 +16,10 @@ const Contact = () => {
           </h4>
 
           <div className="flex flex-row">
-            <div className="border-2 flex w-full flex-nowrap border-myWine my-12">
-              <div className="w-full m-8 p-2 border-2 border-myWine">
+            <div className="flex w-full flex-nowrap my-12">
+              <div className="w-full mt-15 mx-40 border-2 border-myWine flex-row gap-0 items-stretch">
                 <Form />
               </div>
-            </div>
-
-            <div className="hidden lg:block w-full">
-              <img
-                alt="contactForm"
-                src={ContactPhoto}
-                className="none hidden md:block max-w-screen-sm my-12"
-              />
             </div>
           </div>
 

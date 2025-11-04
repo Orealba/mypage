@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const Navbar = () => {
   const { t } = useTranslation();
+  const [cvDropdownOpen, setCvDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setCvDropdownOpen(false);
+      }
+    };
+
+    if (cvDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [cvDropdownOpen]);
 
   return (
     <div>
@@ -58,6 +76,47 @@ const Navbar = () => {
                     className="block">
                     {t('nav.works')}
                   </a>
+                </li>
+                <li
+                  className="relative"
+                  ref={dropdownRef}>
+                  <button
+                    onClick={() => setCvDropdownOpen(!cvDropdownOpen)}
+                    className="w-full text-left md:w-auto flex items-center">
+                    {t('nav.cv')}
+                    <svg
+                      className={`w-4 h-4 ml-1 transition-transform ${
+                        cvDropdownOpen ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {cvDropdownOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
+                      <a
+                        href="/documents/OrealbaSorianoDev.pdf"
+                        download
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg"
+                        onClick={() => setCvDropdownOpen(false)}>
+                        {t('nav.cvDeveloper')}
+                      </a>
+                      <a
+                        href="/documents/OrealbaSorianoJournalist.pdf"
+                        download
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 last:rounded-b-lg"
+                        onClick={() => setCvDropdownOpen(false)}>
+                        {t('nav.cvJournalist')}
+                      </a>
+                    </div>
+                  )}
                 </li>
                 <li>
                   <a

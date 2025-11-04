@@ -1,11 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import headerBackground from '../../assets/images/photos/headerBackground.webp';
 import Navbar from '../Navbar/Navbar.js';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+
+const Letter = ({ letter, className, animationDelay, isSpace }) => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+      setTimeout(() => {
+        setHasAnimated(false);
+      }, 600);
+    }
+  };
+
+  return (
+    <span className="header-letter-wrapper inline-block">
+      <span
+        className={`${className} inline-block cursor-default ${
+          hasAnimated ? 'animate-once' : ''
+        }`}
+        style={{ animationDelay }}
+        onMouseEnter={handleMouseEnter}>
+        {isSpace ? '\u00A0' : letter}
+      </span>
+    </span>
+  );
+};
 
 const Header = () => {
   const { t } = useTranslation();
+
+  const title = t('header.title');
+  const titleLetters = title.split('').map((letter, index) => (
+    <Letter
+      key={index}
+      letter={letter}
+      className="header-letter-title"
+      animationDelay={`${index * 0.05}s`}
+      isSpace={letter === ' '}
+    />
+  ));
+
+  const subtitle = t('header.subtitle');
+  let letterIndex = 0;
+  const subtitleParts = subtitle.split('<br />');
+  const subtitleLetters = subtitleParts.map((part, partIndex) => {
+    const partLetters = part.split('').map((letter) => {
+      const currentIndex = letterIndex++;
+      return (
+        <Letter
+          key={`subtitle-${partIndex}-${currentIndex}`}
+          letter={letter}
+          className="header-letter-subtitle"
+          animationDelay={`${currentIndex * 0.05}s`}
+          isSpace={letter === ' '}
+        />
+      );
+    });
+
+    return (
+      <React.Fragment key={`part-${partIndex}`}>
+        {partLetters}
+        {partIndex < subtitleParts.length - 1 && <br />}
+      </React.Fragment>
+    );
+  });
 
   return (
     <div>
@@ -18,15 +80,12 @@ const Header = () => {
         </div>
         <div>
           <h1 className="text-3xl text-myWine pl-14 font-alata text-start md:text-5xl md:pl-20 md:pt-20 lg:text-6xl lg:pt-60 lg:pl-16 xl:text-7xl xl:mt-28">
-            {t('header.title')}
+            {titleLetters}
           </h1>
         </div>
         <div>
           <h2 className="text-md text-start font-alata text-myGrey pl-16 md:text-2xl md:pl-20 lg:text-4xl xl:text-5xl ">
-            <Trans
-              i18nKey="header.subtitle"
-              components={{ br: <br /> }}
-            />
+            {subtitleLetters}
           </h2>
         </div>
       </div>
