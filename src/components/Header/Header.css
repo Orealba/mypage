@@ -15,23 +15,29 @@
 }
 
 .header-letter-title {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, font-family 0.3s ease,
+    font-weight 0.3s ease;
 }
 
 .header-letter-title:hover {
   animation: letterJump 0.6s ease;
   transform: translateY(-10px);
   color: #5d534a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
 }
 
 .header-letter-subtitle {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, font-family 0.3s ease,
+    font-weight 0.3s ease;
 }
 
 .header-letter-subtitle:hover {
   animation: letterJump 0.6s ease;
   transform: translateY(-10px);
   color: #850808;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
 }
 
 @keyframes letterJump {
