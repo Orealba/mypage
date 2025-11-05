@@ -6,53 +6,200 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 const Navbar = () => {
   const { t } = useTranslation();
   const [cvDropdownOpen, setCvDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setCvDropdownOpen(false);
       }
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        !event.target.closest('button[data-collapse-toggle="navbar-solid-bg"]')
+      ) {
+        setMobileMenuOpen(false);
+      }
     };
 
-    if (cvDropdownOpen) {
+    if (cvDropdownOpen || mobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [cvDropdownOpen]);
+  }, [cvDropdownOpen, mobileMenuOpen]);
 
   return (
     <div>
-      <nav className="pl-12 navbar__large">
+      <nav className="pl-4 sm:pl-12 navbar__large relative">
         <div className="flex flex-wrap items-center justify-between mx-auto">
-          <button
-            data-collapse-toggle="navbar-solid-bg"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-solid-bg"
-            aria-expanded="false">
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14">
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+          <div className="relative md:hidden">
+            <button
+              data-collapse-toggle="navbar-solid-bg"
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-solid-bg"
+              aria-expanded={mobileMenuOpen}>
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14">
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            {mobileMenuOpen && (
+              <div
+                ref={mobileMenuRef}
+                className="absolute left-12 top-0 mt-0 w-56 bg-gray-300 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
+                <ul className="flex flex-col font-medium p-2 text-lg">
+                  <li>
+                    <a
+                      href="#home-section"
+                      className="block px-4 py-2 rounded hover:bg-gray-400 navbar__home"
+                      onClick={() => setMobileMenuOpen(false)}
+                      aria-current="page">
+                      {t('nav.home')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#WhoamI-section"
+                      className="block px-4 py-2 rounded hover:bg-gray-400"
+                      onClick={() => setMobileMenuOpen(false)}>
+                      {t('nav.who')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#works-section"
+                      className="block px-4 py-2 rounded hover:bg-gray-400"
+                      onClick={() => setMobileMenuOpen(false)}>
+                      {t('nav.works')}
+                    </a>
+                  </li>
+                  <li className="relative">
+                    <button
+                      onClick={() => setCvDropdownOpen(!cvDropdownOpen)}
+                      className="w-full text-left px-4 py-2 rounded hover:bg-gray-400 flex items-center justify-between">
+                      {t('nav.cv')}
+                      <svg
+                        className={`w-4 h-4 ml-1 transition-transform ${
+                          cvDropdownOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {cvDropdownOpen && (
+                      <div className="mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+                        <button
+                          type="button"
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg"
+                          onClick={async (e) => {
+                            e.preventDefault();
+                            try {
+                              const response = await fetch(
+                                '/documents/OrealbaSorianoDev.pdf',
+                              );
+                              const blob = await response.blob();
+                              const url = window.URL.createObjectURL(blob);
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = 'OrealbaSorianoDev.pdf';
+                              link.style.display = 'none';
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                              window.URL.revokeObjectURL(url);
+                            } catch (error) {
+                              console.error('Error downloading file:', error);
+                              window.open(
+                                '/documents/OrealbaSorianoDev.pdf',
+                                '_blank',
+                              );
+                            }
+                            setTimeout(() => {
+                              setCvDropdownOpen(false);
+                              setMobileMenuOpen(false);
+                            }, 300);
+                          }}>
+                          {t('nav.cvDeveloper')}
+                        </button>
+                        <button
+                          type="button"
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 last:rounded-b-lg"
+                          onClick={async (e) => {
+                            e.preventDefault();
+                            try {
+                              const response = await fetch(
+                                '/documents/OrealbaSorianoJournalist.pdf',
+                              );
+                              const blob = await response.blob();
+                              const url = window.URL.createObjectURL(blob);
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = 'OrealbaSorianoJournalist.pdf';
+                              link.style.display = 'none';
+                              document.body.appendChild(link);
+                              link.click();
+                              document.body.removeChild(link);
+                              window.URL.revokeObjectURL(url);
+                            } catch (error) {
+                              console.error('Error downloading file:', error);
+                              window.open(
+                                '/documents/OrealbaSorianoJournalist.pdf',
+                                '_blank',
+                              );
+                            }
+                            setTimeout(() => {
+                              setCvDropdownOpen(false);
+                              setMobileMenuOpen(false);
+                            }, 300);
+                          }}>
+                          {t('nav.cvJournalist')}
+                        </button>
+                      </div>
+                    )}
+                  </li>
+                  <li>
+                    <a
+                      href="#contact-section"
+                      className="block px-4 py-2 rounded hover:bg-gray-400"
+                      onClick={() => setMobileMenuOpen(false)}>
+                      {t('nav.contact')}
+                    </a>
+                  </li>
+                  <li className="px-4 py-2">
+                    <LanguageSelector />
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
           <div className="flex items-center gap-4">
             <div
-              className="hidden w-full md:block md:w-auto text-lg"
+              className="hidden md:block md:w-auto text-lg"
               id="navbar-solid-bg">
               <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
                 <li>
