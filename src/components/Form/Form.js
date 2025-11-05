@@ -37,14 +37,14 @@ const Form = () => {
       );
   };
   return (
-    <div className="flex flex-row items-stretch">
+    <div className="flex flex-col lg:flex-row items-stretch">
       <section className="bg-white dark:bg-gray-900 flex-1">
-        <div className="max-w-screen-md">
+        <div className="w-full max-w-full lg:max-w-screen-md">
           <form
             ref={form}
             onSubmit={sendEmail}
             action="#"
-            className="space-y-6 p-6">
+            className="space-y-6 p-4 sm:p-6">
             <div>
               <label
                 htmlFor="email"
@@ -136,12 +136,12 @@ const Form = () => {
         </div>
       </section>
       <div
-        className="hidden lg:flex items-start justify-start flex-shrink-0"
-        style={{ width: '50%', marginTop: '-2.5rem' }}>
+        className="hidden lg:flex items-start justify-start flex-shrink-0 lg:w-1/2"
+        style={{ marginTop: '-2.5rem' }}>
         <img
           alt="contactForm"
           src={ContactPhoto}
-          className="h-full object-cover"
+          className="h-full object-cover w-full"
           style={{ transform: 'scale(0.8)', maxWidth: '100%' }}
         />
       </div>

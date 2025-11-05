@@ -8,22 +8,20 @@ const Contact = () => {
   return (
     <div
       id="contact-section"
-      className="p-12 bg-mybG shadow-myShadow">
+      className="px-4 py-8 sm:px-8 md:p-12 bg-mybG shadow-myShadow">
       <div className="container mx-auto">
         <div>
-          <h4 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
+          <h4 className="text-center pt-6 sm:pt-10 font-semibold sm:text-5xl text-myGrey mb-6 sm:mb-12">
             {t('contact.title')}
           </h4>
 
-          <div className="flex flex-row">
-            <div className="flex w-full flex-nowrap my-12">
-              <div className="w-full mt-15 mx-40 border-2 border-myWine flex-row gap-0 items-stretch">
+          <div className="flex justify-center">
+            <div className="w-full max-w-7xl">
+              <div className="w-full border-2 border-myWine flex flex-col lg:flex-row gap-0 items-stretch">
                 <Form />
               </div>
             </div>
           </div>
-
-          <div></div>
         </div>
       </div>
     </div>
