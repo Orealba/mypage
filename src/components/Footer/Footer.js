@@ -21,27 +21,7 @@ const Footer = () => {
                   {t('nav.home')}
                 </a>
               </li>
-              <li>
-                <a
-                  href="#WhoamI-section"
-                  className="mr-4 hover:underline md:mr-6 text-myWine">
-                  {t('nav.who')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#works-section"
-                  className="mr-4 hover:underline md:mr-6 text-myWine">
-                  {t('nav.works')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact-section"
-                  className="hover:underline text-myWine">
-                  {t('nav.contact')}
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>

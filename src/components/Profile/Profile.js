@@ -10,19 +10,19 @@ const Profile = () => {
       id="WhoamI-section"
       className="bg-mybG shadow-myShadow ">
       <div className="container mx-auto">
-        <h4 className="text-center mt-20 font-semibold  sm:text-5xl text-myGrey">
+        <h4 className="text-center mt-20 font-semibold text-4xl sm:text-5xl text-myGrey">
           {t('profile.title')}
         </h4>
 
         <div className="md:flex">
-          <div className="grid-col-12 gap-12">
+          <div className="grid-col-12 gap-12 flex justify-center md:block">
             <img
               alt="foto"
               src={OrealbaPhoto}
-              className="mt-5 ml-8 rounded-full max-w-xs col-span-2 xl:ml-16 max-h-full sm:max-w-xs md:place-content-center lg:max-w-sm xl:max-w-md 2xl:max-w-md"
+              className="mt-5 rounded-full max-w-[200px] col-span-2 max-h-full md:ml-8 md:max-w-xs md:place-content-center lg:max-w-sm xl:ml-16 xl:max-w-md 2xl:max-w-md"
             />
           </div>
-          <div className="text-justify text-md mt-16 pl-12 pr-20">
+          <div className="text-justify text-md mt-5 p-5 md:mt-16 md:pl-12 md:pr-20 md:p-0">
             <p>
               <Trans
                 i18nKey="profile.text1"
