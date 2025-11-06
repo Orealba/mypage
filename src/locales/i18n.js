@@ -68,7 +68,7 @@ const resources = {
 
       // Footer
       'footer.copyright':
-        '© 2023 Designed and created by Orealba Soriano. All Rights Reserved.',
+        '© 2025 Designed and created by Orealba Soriano. All Rights Reserved.',
     },
   },
   es: {
@@ -140,7 +140,7 @@ const resources = {
 
       // Footer
       'footer.copyright':
-        '© 2023 Diseñado y creado por Orealba Soriano. Todos los derechos reservados.',
+        '© 2025 Diseñado y creado por Orealba Soriano. Todos los derechos reservados.',
     },
   },
 };

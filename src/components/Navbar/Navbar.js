@@ -9,16 +9,25 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // No cerrar si el click es en un botón de descarga de PDF
+      if (event.target.closest('button[data-pdf-download]')) {
+        return;
+      }
+
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setCvDropdownOpen(false);
       }
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target) &&
-        !event.target.closest('button[data-collapse-toggle="navbar-solid-bg"]')
+        !event.target.closest(
+          'button[data-collapse-toggle="navbar-solid-bg"]',
+        ) &&
+        !mobileDropdownRef.current?.contains(event.target)
       ) {
         setMobileMenuOpen(false);
       }
@@ -112,70 +121,113 @@ const Navbar = () => {
                       </svg>
                     </button>
                     {cvDropdownOpen && (
-                      <div className="mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+                      <div
+                        ref={mobileDropdownRef}
+                        className="mt-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                         <button
                           type="button"
-                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg"
+                          data-pdf-download
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg cursor-pointer"
                           onClick={async (e) => {
                             e.preventDefault();
+                            e.stopPropagation();
+
+                            const pdfUrl = '/documents/OrealbaSorianoDev.pdf';
+                            const fileName = 'OrealbaSorianoDev.pdf';
+
                             try {
-                              const response = await fetch(
-                                '/documents/OrealbaSorianoDev.pdf',
-                              );
+                              // Intentar descargar usando fetch
+                              const response = await fetch(pdfUrl);
+                              if (!response.ok)
+                                throw new Error('Failed to fetch');
+
                               const blob = await response.blob();
                               const url = window.URL.createObjectURL(blob);
+
+                              // Crear link temporal
                               const link = document.createElement('a');
                               link.href = url;
-                              link.download = 'OrealbaSorianoDev.pdf';
+                              link.download = fileName;
                               link.style.display = 'none';
+
+                              // Agregar al DOM y hacer click
                               document.body.appendChild(link);
-                              link.click();
-                              document.body.removeChild(link);
-                              window.URL.revokeObjectURL(url);
+
+                              // Usar requestAnimationFrame para asegurar que el click funcione
+                              requestAnimationFrame(() => {
+                                link.click();
+
+                                // Limpiar después de un delay
+                                setTimeout(() => {
+                                  document.body.removeChild(link);
+                                  window.URL.revokeObjectURL(url);
+                                }, 200);
+                              });
                             } catch (error) {
-                              console.error('Error downloading file:', error);
-                              window.open(
-                                '/documents/OrealbaSorianoDev.pdf',
-                                '_blank',
-                              );
+                              console.error('Error downloading PDF:', error);
+                              // Fallback: abrir en nueva pestaña
+                              window.open(pdfUrl, '_blank');
                             }
+
+                            // Cerrar el menú después de un delay
                             setTimeout(() => {
                               setCvDropdownOpen(false);
                               setMobileMenuOpen(false);
-                            }, 300);
+                            }, 500);
                           }}>
                           {t('nav.cvDeveloper')}
                         </button>
                         <button
                           type="button"
-                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 last:rounded-b-lg"
+                          data-pdf-download
+                          className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 last:rounded-b-lg cursor-pointer"
                           onClick={async (e) => {
                             e.preventDefault();
+                            e.stopPropagation();
+
+                            const pdfUrl =
+                              '/documents/OrealbaSorianoJournalist.pdf';
+                            const fileName = 'OrealbaSorianoJournalist.pdf';
+
                             try {
-                              const response = await fetch(
-                                '/documents/OrealbaSorianoJournalist.pdf',
-                              );
+                              // Intentar descargar usando fetch
+                              const response = await fetch(pdfUrl);
+                              if (!response.ok)
+                                throw new Error('Failed to fetch');
+
                               const blob = await response.blob();
                               const url = window.URL.createObjectURL(blob);
+
+                              // Crear link temporal
                               const link = document.createElement('a');
                               link.href = url;
-                              link.download = 'OrealbaSorianoJournalist.pdf';
+                              link.download = fileName;
                               link.style.display = 'none';
+
+                              // Agregar al DOM y hacer click
                               document.body.appendChild(link);
-                              link.click();
-                              document.body.removeChild(link);
-                              window.URL.revokeObjectURL(url);
+
+                              // Usar requestAnimationFrame para asegurar que el click funcione
+                              requestAnimationFrame(() => {
+                                link.click();
+
+                                // Limpiar después de un delay
+                                setTimeout(() => {
+                                  document.body.removeChild(link);
+                                  window.URL.revokeObjectURL(url);
+                                }, 200);
+                              });
                             } catch (error) {
-                              console.error('Error downloading file:', error);
-                              window.open(
-                                '/documents/OrealbaSorianoJournalist.pdf',
-                                '_blank',
-                              );
+                              console.error('Error downloading PDF:', error);
+                              // Fallback: abrir en nueva pestaña
+                              window.open(pdfUrl, '_blank');
                             }
+
+                            // Cerrar el menú después de un delay
                             setTimeout(() => {
                               setCvDropdownOpen(false);
                               setMobileMenuOpen(false);
-                            }, 300);
+                            }, 500);
                           }}>
                           {t('nav.cvJournalist')}
                         </button>
@@ -199,7 +251,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-4">
             <div
-              className="hidden md:block md:w-auto text-lg"
+              className="navbar-desktop-menu md:w-auto text-lg"
               id="navbar-solid-bg">
               <ul className="flex flex-col font-medium pl-2 mt-4 rounded-lg bg-gray-300 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
                 <li>

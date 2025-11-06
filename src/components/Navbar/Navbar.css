@@ -8,3 +8,13 @@
   color: #5d534a;
   font-style: bold;
 }
+
+.navbar-desktop-menu {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-desktop-menu {
+    display: flex !important;
+  }
+}

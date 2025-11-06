@@ -12,7 +12,7 @@ const CartosApp = () => {
       id="works-section"
       className="bg-mybG shadow-myShadow">
       <div className="container mx-auto">
-        <h1 className="text-center pt-10 font-semibold sm:text-5xl text-myGrey">
+        <h1 className="text-center pt-10 pb-6 font-semibold text-4xl sm:text-5xl text-myGrey">
           {t('works.title')}
         </h1>
         <h3 className="pl-8 pb-5 sm:text-3xl font-semibold text-myGrey">
