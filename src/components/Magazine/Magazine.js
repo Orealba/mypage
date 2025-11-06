@@ -18,7 +18,6 @@ const Magazine = () => {
           {t('magazine.title')}
         </h4>
 
-        {/* Fila: imagen izquierda, texto derecha */}
         <div className="px-8 pb-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="md:w-1/2">

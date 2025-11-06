@@ -14,7 +14,6 @@
   transform: translateY(-10px);
 }
 
-/* Contenedor que mantiene el espacio fijo */
 .header-letter-wrapper {
   display: inline-block;
   position: relative;

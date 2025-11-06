@@ -15,7 +15,6 @@ const Redes = () => {
           {t('redes.title')}
         </h4>
 
-        {/* Fila: texto izquierda, imagen derecha */}
         <div className="p-8">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/2 text-md md:pr-4">

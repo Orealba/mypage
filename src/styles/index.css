@@ -5,11 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sanx m-0
-  
-
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */;
+  @apply font-sanx m-0;
 }
 
 code {

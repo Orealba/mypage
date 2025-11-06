@@ -36,7 +36,6 @@ const Carousel = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   }, [slides.length]);
 
-  // Navegación por teclado
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === 'ArrowRight') {
@@ -52,7 +51,6 @@ const Carousel = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [nextSlide, prevSlide]);
 
-  // Navegación por scroll del mouse (horizontal)
   useEffect(() => {
     let isScrolling = false;
     const handleWheel = (e) => {
@@ -61,7 +59,6 @@ const Carousel = () => {
       e.preventDefault();
       isScrolling = true;
 
-      // Scroll horizontal: deltaX o deltaY (dependiendo del dispositivo)
       if (e.deltaX > 0 || (e.deltaX === 0 && e.deltaY > 0)) {
         nextSlide();
       } else {
@@ -77,7 +74,6 @@ const Carousel = () => {
     return () => window.removeEventListener('wheel', handleWheel);
   }, [nextSlide, prevSlide]);
 
-  // Actualizar hash cuando cambia el slide
   useEffect(() => {
     const slideToHash = {
       0: 'home-section',
@@ -95,14 +91,13 @@ const Carousel = () => {
     }
   }, [currentSlide]);
 
-  // Manejar navegación desde el Navbar
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
       const hashToSlide = {
         'home-section': 0,
         'WhoamI-section': 1,
-        'works-section': 2, // Va al primer work (CartosApp)
+        'works-section': 2,
         'contact-section': 6,
       };
 
@@ -113,7 +108,7 @@ const Carousel = () => {
     };
 
     window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Verificar hash inicial
+    handleHashChange();
 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
@@ -135,7 +130,6 @@ const Carousel = () => {
         })}
       </div>
 
-      {/* Indicadores de navegación */}
       <div className="carousel-indicators">
         {slides.map((_, index) => (
           <button
@@ -149,7 +143,6 @@ const Carousel = () => {
         ))}
       </div>
 
-      {/* Botones de navegación */}
       <button
         className="carousel-nav-button carousel-nav-prev"
         onClick={prevSlide}
@@ -186,7 +179,6 @@ const Carousel = () => {
         </svg>
       </button>
 
-      {/* Footer solo en la última slide */}
       {currentSlide === slides.length - 1 && <Footer />}
     </div>
   );

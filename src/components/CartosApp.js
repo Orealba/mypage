@@ -27,7 +27,6 @@ const CartosApp = () => {
           </a>
         </h4>
 
-        {/* Fila 1: texto izquierda, imagen derecha */}
         <div className="p-5">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/2 text-md md:pr-4">
@@ -53,7 +52,6 @@ const CartosApp = () => {
           </div>
         </div>
 
-        {/* Fila 2: imagen izquierda, texto derecha */}
         <div className="px-8 ">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="md:w-1/2 order-last md:order-first">
